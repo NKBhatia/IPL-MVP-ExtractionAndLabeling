@@ -1,0 +1,107 @@
+[
+  {
+    "oifm_id": "OIFM_GMTS_007899",
+    "name": "abnormal configuration of cerebral ventricles",
+    "description": "Altered shape or size of the brain's ventricular system",
+    "synonyms": ["ventricular deformity"],
+    "tags": ["ultrasound", "MR", "CT", "brain", "ventricular", "finding"]
+  },
+  {
+    "oifm_id": "OIFM_GMTS_006224",
+    "name": "abnormal contour of calvarium",
+    "description": "Irregular shape of the skull's dome",
+    "synonyms": ["skull contour abnormality"],
+    "tags": ["ultrasound", "CT", "XR", "MR", "skull", "bony", "finding"]
+  },
+  {
+    "oifm_id": "OIFM_GMTS_009729",
+    "name": "abnormal odontoid process",
+    "description": "Deviations in the shape or size of the odontoid process, affecting cervical stability.",
+    "synonyms": ["dens anomaly", "odontoid abnormality", "abnormal dens"],
+    "tags": ["neuro", "CT", "XR", "spinal column", "odontoid", "cervical spine", "morphological", "finding"]
+  },
+  {
+    "oifm_id": "OIFM_GMTS_025625",
+    "name": "abnormal septum pellucidum",
+    "description": "Anomalies in the septum separating the lateral ventricles of the brain",
+    "synonyms": ["septum pellucidum defect"],
+    "tags": ["ultrasound", "MR", "CT", "brain", "congenital", "finding"]
+  },
+  {
+    "oifm_id": "OIFM_GMTS_018288",
+    "name": "abnormal ventricular configuration",
+    "description": "Any deviation from normal ventricular shape or size, often indicative of neurological issues.",
+    "synonyms": ["ventricular shape anomaly"],
+    "tags": ["neuro", "CT", "MR", "brain", "cerebral ventricles", "morphological", "finding"]
+  },
+  {
+    "oifm_id": "OIFM_GMTS_024462",
+    "name": "absent paranasal sinus",
+    "description": "One or more paranasal sinuses are absent.",
+    "synonyms": [],
+    "tags": ["head_neck", "CT", "MR", "nose", "face", "congenital anomaly", "finding"]
+  },
+  {
+    "oifm_id": "OIFM_GMTS_007617",
+    "name": "intracranial hemorrhage",
+    "description": "Bleeding within the cranium, which can occur in various locations.",
+    "synonyms": ["ICH", "brain bleed"],
+    "tags": ["neuro", "CT", "MR", "parenchymal", "hemorrhage", "diagnosis"]
+  },
+  {
+    "oifm_id": "OIFM_GMTS_007619",
+    "name": "cerebral infarction",
+    "description": "Death of brain tissue due to inadequate blood supply.",
+    "synonyms": ["stroke", "brain infarct"],
+    "tags": ["neuro", "CT", "MR", "brain", "vascular", "diagnosis"]
+  },
+  {
+    "oifm_id": "OIFM_GMTS_018277",
+    "name": "asymmetrically enlarged lateral ventricles",
+    "description": "Enlargement of one lateral ventricle compared to the other, could indicate various conditions.",
+    "synonyms": [],
+    "tags": ["neuro", "CT", "MR", "brain", "cerebral ventricles", "morphological", "finding"]
+  },
+  {
+    "oifm_id": "OIFM_GMTS_007436",
+    "name": "fourth ventricle outlet obstruction",
+    "description": "Blockage impeding cerebrospinal fluid flow out of the fourth ventricle",
+    "synonyms": ["fourth ventricle obstruction"],
+    "tags": ["neuro", "CT", "MR", "intracranial", "hydrocephalus", "diagnosis"]
+  },
+  {
+    "oifm_id": "OIFM_GMTS_018284",
+    "name": "large ventricles and sulci",
+    "description": "Enlargement of both ventricular system and cortical sulci, suggesting brain atrophy.",
+    "synonyms": ["ventriculomegaly with sulcal enlargement"],
+    "tags": ["neuro", "CT", "MR", "ventricle", "cortex", "neurological", "finding"]
+  },
+  {
+    "oifm_id": "OIFM_GMTS_007615",
+    "name": "periventricular hypodense lesion",
+    "description": "Area of decreased density near the ventricles, often indicating edema or infarct.",
+    "synonyms": [],
+    "tags": ["neuro", "CT", "ventricular", "hypodense", "finding"]
+  },
+  {
+    "oifm_id": "OIFM_GMTS_018266",
+    "name": "communicating hydrocephalus",
+    "description": "Hydrocephalus where CSF flow is obstructed post the ventricles.",
+    "synonyms": ["non-obstructive hydrocephalus"],
+    "tags": ["neuro", "CT", "MR", "brain", "hydrocephalus", "diagnosis"]
+  },
+  {
+    "oifm_id": "OIFM_GMTS_007816",
+    "name": "hydrocephalus",
+    "description": "Accumulation of cerebrospinal fluid in the brain ventricles leading to increased pressure.",
+    "synonyms": ["hydrocephaly", "fetal ventriculomegaly"],
+    "tags": ["ultrasound", "CT", "MR", "neurology", "congenital or acquired", "ventricular", "diagnosis"]
+  },
+  {
+    "oifm_id": "OIFM_GMTS_018270",
+    "name": "obstructive hydrocephalus",
+    "description": "Accumulation of cerebrospinal fluid in the ventricles due to blockage.",
+    "synonyms": [],
+    "tags": ["ultrasound", "CT", "MR", "US", "brain", "obstructive", "diagnosis"]
+  }
+]
