@@ -13,17 +13,17 @@ This project implements an MVP (Minimum Viable Product) pipeline for extracting 
 The pipeline consists of three main steps:
 
 ```
-Raw Reports → Extract Findings → Map to Models → Review Mappings
+Raw Reports → Extract Findings → Review Extraction → Map to Models → Review Mappings
 ```
-
-### Step 0: Review Extracted Findings
-Inspect the raw findings extracted from reports before mapping.
 
 ### Step 1: Extract Findings from Reports
 - **Input:** `data/sample_reports.jsonl` (raw radiology reports)
 - **Output:** `data/extracted_findings.jsonl` (presence/absence of findings)
 - **Technology:** OpenAI GPT-4 with semantic extraction
 - **Purpose:** Create a low-resolution map of radiologic findings
+
+### Step 1A: Review Extracted Findings
+Inspect the raw findings extracted from reports before mapping.
 
 ### Step 2: Map Findings to Standardized Models
 - **Input:** Extracted findings + finding models
@@ -61,11 +61,11 @@ cp .env.example .env
 ### Running the Pipeline
 
 ```bash
-# Step 0: Review what was extracted
-python step0_review_extracted.py
-
 # Step 1: Extract findings from reports
 python step1_extract.py
+
+# Step 1A: Review what was extracted
+python step0_review_extracted.py
 
 # Step 2: Map findings to models
 python step2_map.py
@@ -120,7 +120,7 @@ Output extracted findings:
   {"name": "pica territory infarct", "present": true},
   {"name": "hemorrhagic conversion", "present": true},
   {"name": "mass effect", "present": true},
-  {"name": "hydrocephalus", "present": true}
+  {"name": "obstructive hydrocephalus", "present": true}
 ]
 ```
 
@@ -128,11 +128,11 @@ Output extracted findings:
 Each finding is compared against standardized models using semantic similarity:
 
 ```
-Original Finding: "pica territory infarct"
+Original Finding: "obstructive hydrocephalus"
 ↓
 Embedding comparison
 ↓
-Best Match: "pica infarction" (score: 0.778)
+Best Match: "obstructive hydrocephalus" (score: 0.95)
 Status: MATCHED ✓
 ```
 
