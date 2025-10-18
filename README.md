@@ -1,5 +1,4 @@
 # IPL-MVP-ExtractionAndLabeling
-AI-assisted extraction and mapping of radiology findings
 
 # AI-Assisted Longitudinal Monitoring of Radiologic Findings Using Common Data Elements
 
