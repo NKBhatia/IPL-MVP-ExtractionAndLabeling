@@ -1,0 +1,88 @@
+Report ID,Extracted Finding,Present,Status,Mapped To,Model ID,Confidence Score,Match Status
+rpt_001,pica infarction,1,Present,flagged_for_review,N/A,0.503,⚠️ Flagged
+rpt_001,edema,1,Present,flagged_for_review,N/A,0.429,⚠️ Flagged
+rpt_001,mass effect,1,Present,flagged_for_review,N/A,0.159,⚠️ Flagged
+rpt_001,effacement of the fourth ventricle,1,Present,flagged_for_review,N/A,0.606,⚠️ Flagged
+rpt_001,hydrocephalus,0,Absent,hydrocephalus,OIFM_GMTS_007816,0.741,✓ Matched
+rpt_001,hemorrhagic conversion,0,Absent,flagged_for_review,N/A,0.377,⚠️ Flagged
+rpt_001,new territorial infarct,0,Absent,flagged_for_review,N/A,0.423,⚠️ Flagged
+rpt_001,paranasal sinus disease,0,Absent,flagged_for_review,N/A,0.629,⚠️ Flagged
+rpt_001,orbital abnormality,0,Absent,flagged_for_review,N/A,0.492,⚠️ Flagged
+rpt_001,herniation,0,Absent,flagged_for_review,N/A,0.373,⚠️ Flagged
+rpt_002,pica territory infarct,1,Present,flagged_for_review,N/A,0.443,⚠️ Flagged
+rpt_002,swelling,1,Present,flagged_for_review,N/A,0.375,⚠️ Flagged
+rpt_002,cerebellar tonsillar descent,1,Present,flagged_for_review,N/A,0.389,⚠️ Flagged
+rpt_002,petechial hemorrhage,1,Present,flagged_for_review,N/A,0.472,⚠️ Flagged
+rpt_002,acute infarct,0,Absent,flagged_for_review,N/A,0.578,⚠️ Flagged
+rpt_002,ventricular enlargement,1,Present,flagged_for_review,N/A,0.641,⚠️ Flagged
+rpt_002,extra-axial collections,0,Absent,flagged_for_review,N/A,0.367,⚠️ Flagged
+rpt_002,midline shift,0,Absent,flagged_for_review,N/A,0.385,⚠️ Flagged
+rpt_002,osseous abnormality,0,Absent,flagged_for_review,N/A,0.5,⚠️ Flagged
+rpt_002,paranasal sinus disease,0,Absent,flagged_for_review,N/A,0.629,⚠️ Flagged
+rpt_002,orbital abnormality,0,Absent,flagged_for_review,N/A,0.492,⚠️ Flagged
+rpt_002,hydrocephalus,1,Present,hydrocephalus,OIFM_GMTS_007816,0.741,✓ Matched
+rpt_003,acute infarct,1,Present,flagged_for_review,N/A,0.578,⚠️ Flagged
+rpt_003,petechial hemorrhage,1,Present,flagged_for_review,N/A,0.473,⚠️ Flagged
+rpt_003,edema,1,Present,flagged_for_review,N/A,0.429,⚠️ Flagged
+rpt_003,effacement of the fourth ventricular outflow tract,1,Present,flagged_for_review,N/A,0.645,⚠️ Flagged
+rpt_003,hydrocephalus,1,Present,hydrocephalus,OIFM_GMTS_007816,0.741,✓ Matched
+rpt_003,mass lesion,0,Absent,flagged_for_review,N/A,0.345,⚠️ Flagged
+rpt_003,midline shift,0,Absent,flagged_for_review,N/A,0.385,⚠️ Flagged
+rpt_004,pica infarction,1,Present,flagged_for_review,N/A,0.503,⚠️ Flagged
+rpt_004,hemorrhage,1,Present,flagged_for_review,N/A,0.517,⚠️ Flagged
+rpt_004,new territorial infarct,0,Absent,flagged_for_review,N/A,0.423,⚠️ Flagged
+rpt_004,extra-axial fluid collections,0,Absent,flagged_for_review,N/A,0.447,⚠️ Flagged
+rpt_004,paranasal sinus disease,0,Absent,flagged_for_review,N/A,0.629,⚠️ Flagged
+rpt_004,orbital abnormality,0,Absent,flagged_for_review,N/A,0.492,⚠️ Flagged
+rpt_004,hydrocephalus,1,Present,hydrocephalus,OIFM_GMTS_007816,0.741,✓ Matched
+rpt_005,hemorrhagic right pica territory infarct,1,Present,flagged_for_review,N/A,0.454,⚠️ Flagged
+rpt_005,acute territorial infarct,0,Absent,flagged_for_review,N/A,0.514,⚠️ Flagged
+rpt_005,intra-axial hemorrhage,0,Absent,flagged_for_review,N/A,0.607,⚠️ Flagged
+rpt_005,uncal herniation,0,Absent,flagged_for_review,N/A,0.392,⚠️ Flagged
+rpt_005,subfalcine herniation,0,Absent,flagged_for_review,N/A,0.396,⚠️ Flagged
+rpt_005,increased ventricular sizes,1,Present,flagged_for_review,N/A,0.597,⚠️ Flagged
+rpt_005,transependymal edema,0,Absent,flagged_for_review,N/A,0.477,⚠️ Flagged
+rpt_005,extra-axial fluid collections,0,Absent,flagged_for_review,N/A,0.447,⚠️ Flagged
+rpt_005,paranasal sinus disease,0,Absent,flagged_for_review,N/A,0.629,⚠️ Flagged
+rpt_005,orbital abnormality,0,Absent,flagged_for_review,N/A,0.492,⚠️ Flagged
+rpt_005,obstructive hydrocephalus,1,Present,obstructive hydrocephalus,OIFM_GMTS_018270,0.761,✓ Matched
+rpt_005,inferior displacement of the right cerebellar tonsil,1,Present,flagged_for_review,N/A,0.376,⚠️ Flagged
+rpt_005,compression of the dorsal brainstem,1,Present,flagged_for_review,N/A,0.421,⚠️ Flagged
+rpt_006,pica infarction,1,Present,flagged_for_review,N/A,0.503,⚠️ Flagged
+rpt_006,hemorrhage,1,Present,flagged_for_review,N/A,0.517,⚠️ Flagged
+rpt_006,new infarct,0,Absent,flagged_for_review,N/A,0.504,⚠️ Flagged
+rpt_006,new hemorrhage,0,Absent,flagged_for_review,N/A,0.482,⚠️ Flagged
+rpt_006,paranasal sinus disease,0,Absent,flagged_for_review,N/A,0.629,⚠️ Flagged
+rpt_006,orbital abnormality,0,Absent,flagged_for_review,N/A,0.492,⚠️ Flagged
+rpt_006,tonsillar herniation,1,Present,flagged_for_review,N/A,0.443,⚠️ Flagged
+rpt_006,ventricular dilation,1,Present,flagged_for_review,N/A,0.519,⚠️ Flagged
+rpt_007,pica territory infarct,1,Present,flagged_for_review,N/A,0.443,⚠️ Flagged
+rpt_007,hemorrhagic transformation,1,Present,flagged_for_review,N/A,0.342,⚠️ Flagged
+rpt_007,edema,1,Present,flagged_for_review,N/A,0.429,⚠️ Flagged
+rpt_007,mass effect,1,Present,flagged_for_review,N/A,0.159,⚠️ Flagged
+rpt_007,midline shift,1,Present,flagged_for_review,N/A,0.385,⚠️ Flagged
+rpt_007,ventricular effacement,1,Present,flagged_for_review,N/A,0.473,⚠️ Flagged
+rpt_007,transependymal flow of csf,0,Absent,flagged_for_review,N/A,0.528,⚠️ Flagged
+rpt_007,new acute territorial infarction,0,Absent,flagged_for_review,N/A,0.446,⚠️ Flagged
+rpt_007,new intracranial hemorrhage,0,Absent,flagged_for_review,N/A,0.685,⚠️ Flagged
+rpt_007,perivascular space,1,Present,flagged_for_review,N/A,0.484,⚠️ Flagged
+rpt_007,blowout fracture,1,Present,flagged_for_review,N/A,0.303,⚠️ Flagged
+rpt_007,entrapment,0,Absent,flagged_for_review,N/A,0.204,⚠️ Flagged
+rpt_007,paranasal sinus disease,0,Absent,flagged_for_review,N/A,0.629,⚠️ Flagged
+rpt_007,orbital abnormality,0,Absent,flagged_for_review,N/A,0.492,⚠️ Flagged
+rpt_008,right pica territory infarct,1,Present,flagged_for_review,N/A,0.437,⚠️ Flagged
+rpt_008,hemorrhagic conversion,1,Present,flagged_for_review,N/A,0.377,⚠️ Flagged
+rpt_008,posterior fossa mass effect,1,Present,flagged_for_review,N/A,0.385,⚠️ Flagged
+rpt_008,mass effect on the right dorsal brainstem,1,Present,flagged_for_review,N/A,0.389,⚠️ Flagged
+rpt_008,inferior displacement of the right cerebellar tonsil,1,Present,flagged_for_review,N/A,0.376,⚠️ Flagged
+rpt_008,new infarct,0,Absent,flagged_for_review,N/A,0.504,⚠️ Flagged
+rpt_008,new hemorrhage,0,Absent,flagged_for_review,N/A,0.482,⚠️ Flagged
+rpt_008,effacement of the fourth ventricle,1,Present,flagged_for_review,N/A,0.606,⚠️ Flagged
+rpt_008,deviation of the fourth ventricle to the left,1,Present,flagged_for_review,N/A,0.582,⚠️ Flagged
+rpt_008,dilated lateral ventricles,1,Present,asymmetrically enlarged lateral ventricles,OIFM_GMTS_018277,0.761,✓ Matched
+rpt_008,dilated third ventricle,1,Present,flagged_for_review,N/A,0.578,⚠️ Flagged
+rpt_008,transependymal flow of csf,0,Absent,flagged_for_review,N/A,0.528,⚠️ Flagged
+rpt_008,significant paranasal sinus disease,0,Absent,flagged_for_review,N/A,0.664,⚠️ Flagged
+rpt_008,chronic inferior orbital fracture,1,Present,flagged_for_review,N/A,0.38,⚠️ Flagged
+rpt_008,acute territorial infarction,0,Absent,flagged_for_review,N/A,0.527,⚠️ Flagged
+rpt_008,new site of intracranial hemorrhage,0,Absent,flagged_for_review,N/A,0.617,⚠️ Flagged
