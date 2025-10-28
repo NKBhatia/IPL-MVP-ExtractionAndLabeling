@@ -1,0 +1,186 @@
+```
+Report 1 (2022-05-10):
+  "1.6 cm liver lesion"
+    ↓
+  [Create FHIR Observation Resource]
+  ID: fhir-obs-liver-lesion-001
+    ↓
+  Stored with: date, size, location, status
+
+6 months later...
+
+Report 2 (2022-11-15):
+  "2.1 cm liver lesion"
+    ↓
+  [Link to existing FHIR ID: fhir-obs-liver-lesion-001]
+    ↓
+  Add new value: size updated to 2.1cm
+    
+Timeline view shows:
+  Liver Lesion (2.1cm) - Growing
+  ├─ 2022-05-10: 1.6 cm
+  ├─ 2022-11-15: 2.1 cm
+  └─ 2024-10-15: 2.8 cm (still growing)
+```
+
+**The Key:** Each finding becomes a **tracked entity** with a FHIR ID that persists. Not just "here are findings from this report" but "here's how this specific lesion evolved across all reports."
+
+**Architecture:**
+```
+Reports over time
+    ↓
+Extract findings from each report
+    ↓
+Map to OIDM
+    ↓
+For each finding:
+  - Check if FHIR resource exists for this finding
+  - If YES: Add new observation to that resource
+  - If NO: Create new FHIR Observation resource
+    ↓
+FHIR Observation Database:
+{
+  "fhir-obs-001": {
+    "finding_name": "Liver lesion",
+    "snomed_code": "302255001",
+    "created_date": "2022-05-10",
+    "observations": [
+      {date: "2022-05-10", value: "1.6 cm", status: "new"},
+      {date: "2022-11-15", value: "2.1 cm", status: "growing"},
+      {date: "2024-10-15", value: "2.8 cm", status: "growing"}
+    ]
+  }
+}
+    ↓
+Visualize any finding's full history
+```
+
+**Three-Step Process:**
+
+**Step 1: Extract + Map**
+- Read report → Extract findings → Map to OIDM standard names/codes
+- Output: List of findings with standardized codes
+
+**Step 2: Create/Link FHIR Resources**
+- For each finding, ask: "Does this finding already exist in our FHIR database?"
+- If yes: Link to it, add new observation value
+- If no: Create new FHIR Observation resource with unique ID
+- Output: FHIR resources with updated observations
+
+**Step 3: Query + Visualize**
+- User asks: "Show me the timeline for liver lesion"
+- System finds FHIR resource ID, retrieves all observations
+- Visualizes progression over time
+
+**The MCPs Needed (Very Simple):**
+
+1. **OIDM MCP**
+   - "Map 'liver lesion' to standard code"
+
+2. **FHIR Resource Manager** (not a real server, just local database)
+   - "Does a FHIR resource exist for 'liver lesion' in this patient?"
+   - "Create new FHIR Observation resource"
+   - "Add observation to existing FHIR resource"
+   - "Get all observations for FHIR resource X"
+
+**Database Structure:**
+```
+FHIR Resources JSON:
+{
+  "patient_P001": {
+    "fhir-obs-renal-calculus-001": {
+      "finding": "Renal calculus",
+      "snomed_code": "441974005",
+      "location": "Right kidney",
+      "first_detected": "2009-03-15",
+      "observations": [
+        {
+          "report_date": "2009-03-15",
+          "size_mm": 3,
+          "status": "new"
+        },
+        {
+          "report_date": "2022-05-10",
+          "size_mm": 3,
+          "status": "persistent"
+        },
+        {
+          "report_date": "2024-10-15",
+          "size_mm": 5,
+          "status": "growing"
+        }
+      ]
+    },
+    "fhir-obs-liver-lesion-001": {
+      "finding": "Hepatic lesion",
+      "snomed_code": "302255001",
+      "location": "Segment 8",
+      "first_detected": "2024-10-15",
+      "observations": [
+        {
+          "report_date": "2024-10-15",
+          "size_mm": 16,
+          "status": "new",
+          "urgency": "requires_mri"
+        }
+      ]
+    }
+  }
+}
+```
+
+**Query Examples:**
+```
+"Show me all findings for patient P001"
+→ Returns all FHIR resources for that patient
+
+"Show me the timeline for liver lesion"
+→ Finds fhir-obs-liver-lesion-001
+→ Returns all observations: 16mm at 2024-10-15
+
+"How has the renal calculus changed?"
+→ Finds fhir-obs-renal-calculus-001
+→ Shows: 3mm → 3mm → 5mm
+```
+
+**Files Needed:**
+```
+IPL-FHIR-Tracking/
+├── mcp_servers/
+│   ├── oidm_mcp.py           # Map to standard codes
+│   └── fhir_resource_mgr.py  # Create/link/query FHIR resources
+├── pipeline/
+│   ├── step_1_extract.py     # Extract findings
+│   ├── step_2_map_oidm.py    # Map to OIDM
+│   ├── step_3_fhir_create.py # Create/link FHIR resources
+│   └── step_4_visualize.py   # Timeline view
+├── data/
+│   └── fhir_resources.json   # The persistent FHIR database
+└── requirements.txt
+```
+
+**The Flow:**
+```
+New Report arrives
+    ↓
+Step 1: Claude extracts findings
+    "1.6 cm liver lesion in segment 8"
+    ↓
+Step 2: Map to OIDM standard
+    "Hepatic lesion" + SNOMED 302255001
+    ↓
+Step 3: Check FHIR Resource Manager
+    "Have we seen a hepatic lesion in segment 8 before?"
+    ↓
+    If NO: Create fhir-obs-liver-lesion-001
+    If YES: Link to existing resource
+    ↓
+Step 4: Add new observation to FHIR resource
+    {date: "2024-10-15", size: 16mm, location: "segment 8"}
+    ↓
+Store back to FHIR database
+    ↓
+Now you can query: "Show me all observations for fhir-obs-liver-lesion-001"
+    ↓ 
+Get full timeline
+```
